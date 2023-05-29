@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Layouts</title>
+
+  <script src="https://kit.fontawesome.com/d132031da6.js" crossorigin="anonymous"></script>
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    /* estilização do header */
+    .header {
+      background-color: #fbcaa6;
+      color: #ffffff;
+      padding: 30px;
+      text-align: center;
+      font-size: 35px;
+      align-items: center;
+    }
+
+    /* Criar 3 colunas ao lado uma das outras */
+    .coluna-meio,.coluna-lado {
+      float: left;
+      padding: 10px;
+      height: 300px;
+      /* valor atribuído apenas para demonstração. */
+    }
+
+    /* colunas do lado esquerdo e direito */
+    .coluna-lado {
+      width: 25%;
+      background-color: #f39b3d;
+    }
+
+    /* Coluna do meio*/
+    .coluna-meio {
+      width: 50%;
+      background-color: #f9f9f9;
+    }
+
+    /* para limpar o float após as colunas */
+    .row:after {
+      content: "";
+      display: table;
+      clear: both;
+    }
+
+    /* estilização do footer */
+    .footer {
+      background-color: #f85e0c;
+      color: #fff;
+      padding: 10px;
+      text-align: center;
+    }
+
+    /* Responsive layout */
+    @media (max-width: 600px) {
+
+      .coluna-lado,.column-meio {
+        width: 100%;
+      }
+    }
+
+    ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 10px;
+      background-color: #f87a14;
+    }
+
+    li {
+      display: inline;
+    }
+
+    li a {
+      padding: 10px 20px;
+      text-decoration: none;
+      color: white;
+      text-decoration: none;
+    }
+
+    a:hover {
+      background-color: #f9c781;
+    }
+
+    .active {
+      font-size: 24px;
+      font-weight: bold;
+    }
+
+    #float-right {
+      float: right;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="header">
+    <img src="masterd.jpg" width="500px" height="auto">
+    <h2>O meu primeiro layout</h2>
+  </div>
+
+  <div class="nav">
+    <ul>
+      <li><a class="active" href="un15‐exercicio1.html">Home</a></li>
+      <li><a href="https://www.masterd.pt/)">Master D</a></li>
+      <li><a href="https://www.google.pt/">Google</a></li>
+      <li><a href="https://www.w3schools.com/">W3Schools</a></li>
+      <li><a href="https://www.w3.org/">W3C</a></li>
+      <li id="float-right"><a href=""> <i class="fas fa-search"></a></i>
+      <li>
+    </ul>
+
+    <div class="row">
+      <div class="coluna-lado">Coluna 1 - ocupo 25% da largura total</div>
+      <div class="coluna-meio">Coluna 2 - ocupo 50% da largura total</div>
+      <div class="coluna-lado">Coluna 3 - ocupo 50% da largura total</div>
+    </div>
+
+    <div class="footer">
+      <p>Isto é um footer</p>
+    </div>
+
+</body>
+
+</html>
